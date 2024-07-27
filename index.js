@@ -129,8 +129,8 @@ app.post('/register',async(req,res)=>{
         if(err)throw err
     }
 })
-
-const server=app.listen(4000,()=>{
+const PORT = process.env.PORT || 4000;
+const server=app.listen(PORT,()=>{
     console.log('Server is running at port 4000')
 })
 

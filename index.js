@@ -12,10 +12,15 @@ const Message=require('./models/Message')
 const fs = require ('fs');
 
 
-app.use(cors({
-    origin:'http://localhost:5173',
-    credentials:true,
-}))
+app.use (
+  cors ({
+    origin: '*',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: 'Authorization, token, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+  })
+);
+
 app.use('/uploads',express.static(__dirname+'/uploads'))
 app.use(express.json())
 app.use(cookieParser())

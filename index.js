@@ -42,6 +42,7 @@ let connectionClosed=false
 
 async function getUserDataFromRequest(req){
     return new Promise((resolve,reject)=>{
+        console.log('req headers is:',req)
         const token=req.cookies?.token;
         if(token){
             jwt.verify(token,jwtSecret,{},(err,userData)=>{

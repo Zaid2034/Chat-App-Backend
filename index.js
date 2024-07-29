@@ -107,7 +107,7 @@ app.post('/login',async(req,res)=>{
                 if(err){
                     console.log('error is:',err)
                 }
-                res.cookie('token',token,{sameSite:'none',secure:false,httpOnly: true}).json({
+                res.cookie('token',token,{sameSite:'none',secure:true,httpOnly: true}).json({
                     id:foundUser._id,
                 })
             })

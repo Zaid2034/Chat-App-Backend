@@ -69,10 +69,8 @@ app.get('/messages/:userId',async(req,res)=>{
             sender:{$in:[userId,ourUserId]},
             recipient:{$in:[userId,ourUserId]}
         }).sort({createdAt:1})
-        res.json(messages)
-    
-    
-    
+res.json (messages);
+
 
 })
 app.get('/people',async(req,res)=>{

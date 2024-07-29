@@ -42,7 +42,7 @@ let connectionClosed=false
 
 async function getUserDataFromRequest(req){
     return new Promise((resolve,reject)=>{
-        
+        console.log ('req cookie headers is:', req.cookies);
         const token=req.cookies?.token;
         console.log ('token headers is:', token);
         

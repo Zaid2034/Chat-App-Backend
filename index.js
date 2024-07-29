@@ -14,7 +14,7 @@ const fs = require ('fs');
 
 app.use (
   cors ({
-    origin: '*',
+    origin: 'https://chat-app-fontend.vercel.app/',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     allowedHeaders: 'Authorization, token, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',

@@ -103,6 +103,10 @@ app.post('/login',async(req,res)=>{
                 userId:foundUser._id,
                 username
             },jwtSecret,(err,token)=>{
+                console.log('In login token is:',token)
+                if(err){
+                    console.log('error is:',err)
+                }
                 res.cookie('token',token,{sameSite:'none',secure:true}).json({
                     id:foundUser._id,
                 })
